@@ -1,31 +1,25 @@
 # Informe de Trabajo Parcial
 
-## Universidad Peruana de Ciencias Aplicadas
+## Caratula
+Universidad Peruana de Ciencias Aplicadas
+Carrera: Ingeniería de Software
 
-## Carrera
-Ingeniería de Software
+Ciclo: 2023-02
 
-## Ciclo
-2023-02
+Curso: Complejidad Algorítmica
 
-## Curso
-Complejidad Algorítmica
+Sección: WX73
 
-## Sección
-WX73
+Profesor: Luis Martin Carnaval Sánchez
 
-## Profesor
-Luis Martin Carnaval Sánchez
+Tema: Optimización de Redes de Fibra Óptica de Internet
 
-## Tema
-Optimización de Redes de Fibra Óptica de Internet
-
-## Integrantes
+Integrantes
 - Salvador Antonio Salinas Torres (U20221B127)
 - Jorge Suin Yum Gonzales (U202210838)
 - Daniel Elias Ruiz Huisa (U202210764)
 
-## Septiembre 2023
+Septiembre 2023
 
 ## Descripción del Problema
 
