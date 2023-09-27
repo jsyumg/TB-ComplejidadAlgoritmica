@@ -1,6 +1,6 @@
 # Informe de Trabajo Parcial
 
-## Caratula
+## Carátula
 Universidad Peruana de Ciencias Aplicadas
 Carrera: Ingeniería de Software
 
