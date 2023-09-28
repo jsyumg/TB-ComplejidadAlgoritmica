@@ -1,5 +1,5 @@
 # Informe de Trabajo Parcial
-###
+###---
 ## Carátula
 Universidad Peruana de Ciencias Aplicadas
 
