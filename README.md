@@ -1,12 +1,5 @@
 # Informe de Trabajo Parcial
 
-## Tabla de Contenidos
-- [Caratula](#caratula)
-- [Descripción del Problema](#descripción-del-problema)
-- [Descripción y Visualización del Conjunto de Datos](#descripción-y-visualización-del-conjunto-de-datos)
-- [Propuesta preliminar](#propuesta-preliminar)
-- [Bibliografía](#bibliografía)
-
 ## Carátula
 Universidad Peruana de Ciencias Aplicadas
 
@@ -28,6 +21,12 @@ Integrantes
 - Daniel Elias Ruiz Huisa (U202210764)
 
 Septiembre 2023
+
+## Tabla de Contenidos
+- [Descripción del Problema](#descripción-del-problema)
+- [Descripción y Visualización del Conjunto de Datos](#descripción-y-visualización-del-conjunto-de-datos)
+- [Propuesta preliminar](#propuesta-preliminar)
+- [Bibliografía](#bibliografía)
 
 ## Descripción del Problema
 
