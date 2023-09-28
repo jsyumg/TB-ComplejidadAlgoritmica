@@ -37,6 +37,8 @@ La fibra óptica no solo facilita la comunicación entre personas, sino también
 
 Sin embargo, el verdadero potencial de la fibra óptica se realiza a través de la optimización continua. La optimización de las redes de fibra óptica es crucial para garantizar que los datos se transmitan de manera eficiente, segura y sin demoras en su recorrido desde el origen hasta el destino. De este modo, la latencia, capacidad y fiabilidad son factores críticos que deben ser considerados y mejorados constantemente.
 
+![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ATorres_de_alta_tensi%25C3%25B3n_en_Tlajomulco_de_Z%25C3%25BA%25C3%25B1iga.jpg&psig=AOvVaw0jdRvfznY7_ftaC8QctSiY&ust=1695957235025000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJDT5JarzIEDFQAAAAAdAAAAABAE)
+
 ## Descripción y Visualización del Conjunto de Datos
 
 Para llevar a cabo el análisis, los datos utilizados para este análisis serán generados de forma artificial. El conjunto de datos contiene información detallada sobre la topología de la red de fibra óptica, la capacidad de ancho de banda, latencia. Igualmente, el objetivo es que el programa final sea eficiente y capaz de optimizar las redes de una fibra óptica real, con datos reales, por lo que se procurará que estos datos no se alejen mucho de la realidad.
