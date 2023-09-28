@@ -38,6 +38,7 @@ Sin embargo, el verdadero potencial de la fibra óptica se realiza a través de 
 
 ![image](imagenes/torres.jpg)
 
+
 ## Descripción y Visualización del Conjunto de Datos
 
 Para llevar a cabo el análisis, los datos utilizados para este análisis serán generados de forma artificial. El conjunto de datos contiene información detallada sobre la topología de la red de fibra óptica, la capacidad de ancho de banda, latencia. Igualmente, el objetivo es que el programa final sea eficiente y capaz de optimizar las redes de una fibra óptica real, con datos reales, por lo que se procurará que estos datos no se alejen mucho de la realidad.
@@ -86,6 +87,8 @@ De este modo, se usará nuestro programa para representar un grafo y poder deter
 La razón por la que elegimos el árbol de expansión mínima, es porque permite conectar todos los switches en la red de manera eficiente, garantizando que todos los switches estén conectados entre sí y que haya una ruta de comunicación entre cualquier par de switches. Esto es fundamental para garantizar la conectividad completa en la red.
 
 Así, minimiza la suma total de las latencias en todas las aristas del grafo. Al minimizar la longitud total de las conexiones en la red, contribuye a minimizar la latencia total en la red, ya que las latencias en las fibras ópticas suelen estar relacionadas con la longitud física.
+
+![image](imagenes/expansionMinima.jpg)
 
 ## Bibliografía
 
