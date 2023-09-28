@@ -2,6 +2,7 @@
 
 ## Carátula
 Universidad Peruana de Ciencias Aplicadas
+
 Carrera: Ingeniería de Software
 
 Ciclo: 2023-02
