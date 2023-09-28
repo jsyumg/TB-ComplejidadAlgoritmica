@@ -1,5 +1,12 @@
 # Informe de Trabajo Parcial
 
+## Tabla de Contenidos
+- [Caratula](#caratula)
+- [Descripción del Problema](#descripción-del-problema)
+- [Descripción y Visualización del Conjunto de Datos](#descripción-y-visualización-del-conjunto-de-datos)
+- [Propuesta preliminar](#propuesta-preliminar)
+- [Bibliografía](#bibliografía)
+
 ## Carátula
 Universidad Peruana de Ciencias Aplicadas
 Carrera: Ingeniería de Software
