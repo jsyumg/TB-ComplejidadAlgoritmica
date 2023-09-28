@@ -29,8 +29,6 @@ La fibra óptica no solo facilita la comunicación entre personas, sino también
 
 Sin embargo, el verdadero potencial de la fibra óptica se realiza a través de la optimización continua. La optimización de las redes de fibra óptica es crucial para garantizar que los datos se transmitan de manera eficiente, segura y sin demoras en su recorrido desde el origen hasta el destino. De este modo, la latencia, capacidad y fiabilidad son factores críticos que deben ser considerados y mejorados constantemente.
 
-Así es como el problema a abordar en este trabajo se enfoca en la optimización de redes de fibra óptica de Internet, con el objetivo de mejorar la calidad del servicio, eficiencia y velocidad de conexión para los usuarios. Las redes de fibra óptica cumplen un rol muy importante en la infraestructura de Internet, por lo que su optimización es esencial para garantizar que tenga un rendimiento óptimo.
-
 ## Descripción y Visualización del Conjunto de Datos
 
 Para llevar a cabo el análisis, los datos utilizados para este análisis serán generados de forma artificial. El conjunto de datos contiene información detallada sobre la topología de la red de fibra óptica, la capacidad de ancho de banda, latencia. Igualmente, el objetivo es que el programa final sea eficiente y capaz de optimizar las redes de una fibra óptica real, con datos reales, por lo que se procurará que estos datos no se alejen mucho de la realidad.
@@ -38,10 +36,38 @@ Para llevar a cabo el análisis, los datos utilizados para este análisis serán
 Al tratarse de un análisis que requiere del estudio de un grafo, se tomarán en cuenta 1500 nodos de fibra óptica en la infraestructura de Internet. Cada nodo tendrá los siguientes datos:
 | Dato | Descripción |
 |----------|----------|
-| ID | Identificador único para poder hacerle seguimiento   |
-| Dirección IP | Identificador que usa para el envío de datos
-| Ubicación geográfica | Coordenadas (latitud y longitud)
+| ID | Identificador único del switch |
+| Marca | Marca del switch |
+| Modelo | Modelo del switch |
+| Puertos | Cantidad de puertos del switch
+| Ubicación | Coordenadas (latitud y longitud)
 | Capacidad de ancho de banda | Capacidad que tiene para enviar datos y recibir datos en un tiempo dado
-| Tipo de equipo | Dispositivo que representa el nodo
 
 Para las aristas, se considerará la latencia que hay desde un nodo hacia otro, lo cual es importante para determinar la latencia mínima en la red.
+
+| Dato | Descripción |
+|----------|----------|
+| Nodo1 | Index del primer switch |
+| Nodo2 | Index del segundo switch |
+| Latencia | Latencia entre ambos switches (en microsegundos) |
+
+Una muestra de datos para un nodo.
+| Dato | Ejemplo |
+|----------|----------|
+| ID | 76505 |
+| Marca | Juniper Networks |
+| Modelo | V6SV1K |
+| Puertos | 12 |
+| Ubicación | (89.49640570453458, 65.97759746460487) |
+| Ancho de banda | 210 |
+
+Una muestra de datos para una arista.
+| Dato | Ejemplo |
+|----------|----------|
+| Nodo1 | 401 |
+| Nodo2 | 1023 |
+| Latencia | 75 |
+
+
+
+
