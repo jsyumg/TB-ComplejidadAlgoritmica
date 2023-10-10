@@ -11,7 +11,7 @@ Curso: Complejidad Algorítmica
 
 Sección: WX73
 
-Profesor: Luis Martin Carnaval Sánchez
+Profesor: Luis Martin Canaval Sánchez
 
 Tema: Optimización de Redes de Fibra Óptica de Internet
 
