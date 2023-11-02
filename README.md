@@ -26,6 +26,7 @@ Septiembre 2023
 - [Descripción del Problema](#descripción-del-problema)
 - [Descripción y Visualización del Conjunto de Datos](#descripción-y-visualización-del-conjunto-de-datos)
 - [Propuesta](#propuesta)
+- [Diseño del Aplicativo](#disenio-del-aplicativo)
 - [Bibliografía](#bibliografía)
 
 ## Descripción del Problema
@@ -95,6 +96,17 @@ Así, minimiza la suma total de las latencias en todas las aristas del grafo. Al
 ![image](imagenes/expansionMinima.jpg)
 
 En adición, también podemos implementar el algoritmo de Prim, con el fin de realizar una prueba de complejidad algorítmica para saber cual es más eficiente. Para esto, se registraría en primer lugar los componentes del dispositivo ejecutando ambos algoritmos, la adición de un algoritmo que mida el tiempo del inicio hasta el final con ambos algoritmos de conexión y finalmente registrarlos en un cuaderno de excel u otro tipo de documento que nos permita ordenar los datos para generar un gráfico que compare la eficiencia de los Algoritmos con relación al tiempo.
+
+## Diseño del aplicativo
+
+Para el proceso de diseño del aplicativo que se enfocará en la optimización de redes de fibra óptica mediante un árbol de expansión mínima, se siguieron las etapas de la ingeniería de software, las cuales nos permitieron identificar las fases del ciclo de vida de desarrollo de software.
+
+Para comenzar, se identificaron y analizaron detalladamente los requisitos y funcionalidades del aplicativo. Esto se empezó a trabajar desde la identificación del problema de la red de fibra óptica y como se espera que el programa sea capaz de hallar una optimización de esta.
+
+Luego, se realizó el análisis de los requisitos para saber lo que necesitábamos, lo cual se trabajó con la descripción del dataset, en el cual se especifica que se trabajará con los nodos que representan los switches y las aristas que representan las latencias entre estos.
+
+Además, con esto también se definió el diseño de los datos, se establecieron las estructuras de datos necesarias para el almacenamiento eficiente de información crítica, como la representación de la red de fibra óptica y sus atributos asociados en un grafo no dirigido. Estos datos son fundamentales para la ejecución del algoritmo de Kruskal, el cual fue seleccionado para el proceso de optimización.
+
 
 ## Bibliografía
 
