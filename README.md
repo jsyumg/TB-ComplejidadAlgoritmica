@@ -25,7 +25,7 @@ Septiembre 2023
 ## Tabla de Contenidos
 - [Descripción del Problema](#descripción-del-problema)
 - [Descripción y Visualización del Conjunto de Datos](#descripción-y-visualización-del-conjunto-de-datos)
-- [Propuesta preliminar](#propuesta-preliminar)
+- [Propuesta](#propuesta)
 - [Bibliografía](#bibliografía)
 
 ## Descripción del Problema
@@ -82,7 +82,7 @@ Una muestra de datos para una arista.
 | Nodo2 | 1023 |
 | Latencia | 75 |
 
-## Propuesta preliminar
+## Propuesta
 
 Nuestra propuesta se enfoca en la optimización de redes de fibra óptica de Internet, con el objetivo de mejorar la calidad del servicio al incrementar la eficiencia y velocidad de conexión para los usuarios. Las redes de fibra óptica cumplen un rol muy importante en la infraestructura de Internet, por lo que su optimización es esencial para garantizar que tenga un rendimiento óptimo.
 
@@ -94,12 +94,12 @@ Así, minimiza la suma total de las latencias en todas las aristas del grafo. Al
 
 ![image](imagenes/expansionMinima.jpg)
 
+En adición, también podemos implementar el algoritmo de Prim, con el fin de realizar una prueba de complejidad algorítmica para saber cual es más eficiente. Para esto, se registraría en primer lugar los componentes del dispositivo ejecutando ambos algoritmos, la adición de un algoritmo que mida el tiempo del inicio hasta el final con ambos algoritmos de conexión y finalmente registrarlos en un cuaderno de excel u otro tipo de documento que nos permita ordenar los datos para generar un gráfico que compare la eficiencia de los Algoritmos con relación al tiempo.
+
 ## Bibliografía
 
 Becerra, J. (2021, 29 de julio) Fibra óptica: la conectividad que está haciendo girar al mundo. CIO México. Recuperado el 21 de septiembre de 2023 de: Becerra, J. (2021, 29 de julio) Fibra óptica: la conectividad que está haciendo girar al mundo. CIO México. Recuperado el 21 de septiembre de 2023 de: https://cio.com.mx/fibra-optica-la-conectividad-que-esta-hciendo-girar-al-mundo/
 
 Mayta, R. (2002) Algoritmo Evolutivo para el problema de Árbol de Expansión Mínima (MST). Recuperado el 27 de septiembre de 2023 de: https://sisbib.unmsm.edu.pe/bibvirtual/publicaciones/indata/v05_n2/algorit_evo.htm
-
-
 
 
