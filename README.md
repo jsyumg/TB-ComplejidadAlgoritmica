@@ -26,7 +26,7 @@ Septiembre 2023
 - [Descripción del Problema](#descripción-del-problema)
 - [Descripción y Visualización del Conjunto de Datos](#descripción-y-visualización-del-conjunto-de-datos)
 - [Propuesta](#propuesta)
-- [Diseño del Aplicativo](#disenio-del-aplicativo)
+- [Diseño del Aplicativo](#diseño-del-aplicativo)
 - [Bibliografía](#bibliografía)
 
 ## Descripción del Problema
@@ -107,11 +107,17 @@ Luego, se realizó el análisis de los requisitos para saber lo que necesitábam
 
 Además, con esto también se definió el diseño de los datos, se establecieron las estructuras de datos necesarias para el almacenamiento eficiente de información crítica, como la representación de la red de fibra óptica y sus atributos asociados en un grafo no dirigido. Estos datos son fundamentales para la ejecución del algoritmo de Kruskal, el cual fue seleccionado para el proceso de optimización.
 
+Los algoritmos a utilizar son diseñados e implementados en el contexto del aplicativo, considerando a las complejidades temporales y espaciales, asegurando una ejecución eficiente orientada en redes de gran escala. Esto es importante, tomando en cuenta que el grafo tiene 1500 nodos, lo cual influye bastante en la eficiencia del programa.
+
+En cuanto a la interfaz de usuario, se desarrolla una interfaz intuitiva que permite a los usuarios interactuar fácilmente con el programa, con lo cual también se muestra una presentación clara de los resultados, facilitando la comprensión de las mejoras en la optimización de la red de fibra óptica.
+
+Para lograr un buen desarrollo del proyecto, utilizamos GitHub para manejar un repositorio, en el cual se realiza la documentación de este reporte, los datasets y el programa. Así como también establecimos una comunicación frecuente a través de un grupo de WhatsApp y organizamos reuniones presenciales en los cubículos de la universidad para compartir ideas y desarrollar el trabajo con mayor fluidez.
+
+En resumen, el diseño del aplicativo se llevó a cabo de manera integral, abordando cada etapa con atención a los detalles y considerando las complejidades específicas de la optimización de redes de fibra óptica. La combinación de principios de ingeniería de software y análisis de algoritmos nos permite desarrollar un aplicativo eficiente para mejorar la infraestructura de redes de fibra óptica.
 
 ## Bibliografía
 
 Becerra, J. (2021, 29 de julio) Fibra óptica: la conectividad que está haciendo girar al mundo. CIO México. Recuperado el 21 de septiembre de 2023 de: Becerra, J. (2021, 29 de julio) Fibra óptica: la conectividad que está haciendo girar al mundo. CIO México. Recuperado el 21 de septiembre de 2023 de: https://cio.com.mx/fibra-optica-la-conectividad-que-esta-hciendo-girar-al-mundo/
 
 Mayta, R. (2002) Algoritmo Evolutivo para el problema de Árbol de Expansión Mínima (MST). Recuperado el 27 de septiembre de 2023 de: https://sisbib.unmsm.edu.pe/bibvirtual/publicaciones/indata/v05_n2/algorit_evo.htm
-
 
