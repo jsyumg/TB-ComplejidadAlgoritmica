@@ -1,35 +1,38 @@
 # Informe de Trabajo Parcial
 
-## Carátula
-Universidad Peruana de Ciencias Aplicadas
+## **Carátula**
 
-Carrera: Ingeniería de Software
+**Universidad Peruana de Ciencias Aplicadas**
 
-Ciclo: 2023-02
+![image](imagenes/upc.png)
 
-Curso: Complejidad Algorítmica
+**Carrera:** Ingeniería de Software
 
-Sección: WX73
+**Ciclo:** 2023-02
 
-Profesor: Luis Martin Canaval Sánchez
+**Curso:** Complejidad Algorítmica
 
-Tema: Optimización de Redes de Fibra Óptica de Internet
+**Sección:** WX73
 
-Integrantes
+**Profesor:** Luis Martin Canaval Sánchez
+
+**Tema:** Optimización de Redes de Fibra Óptica de Internet
+
+**Integrantes:**
 - Salvador Antonio Salinas Torres (U20221B127)
 - Jorge Suin Yum Gonzales (U202210838)
 - Daniel Elias Ruiz Huisa (U202210764)
 
-Septiembre 2023
+Noviembre 2023
 
-## Tabla de Contenidos
+## **Tabla de Contenidos**
 - [Descripción del Problema](#descripción-del-problema)
 - [Descripción y Visualización del Conjunto de Datos](#descripción-y-visualización-del-conjunto-de-datos)
 - [Propuesta](#propuesta)
 - [Diseño del Aplicativo](#diseño-del-aplicativo)
 - [Bibliografía](#bibliografía)
 
-## Descripción del Problema
+## **Descripción del Problema**
 
 En la era digital actual, la conectividad es el tejido que une a nuestro mundo interconectado. Las redes de comunicación son la columna vertebral que sostiene nuestras vidas cotidianas y nuestras economías globales. Entre las tecnologías que han revolucionado nuestra capacidad de comunicarnos y acceder a información de manera instantánea, la fibra óptica se destaca como una innovación fundamental. La fibra óptica, con su capacidad para transmitir datos a grandes velocidades, distancias y sin pérdidas, se ha convertido en el medio de elección para la transmisión de datos en redes de telecomunicaciones.
 
@@ -44,46 +47,46 @@ Sin embargo, el verdadero potencial de la fibra óptica se realiza a través de 
 ![image](imagenes/switch.jpg)
 
 
-## Descripción y Visualización del Conjunto de Datos
+## **Descripción y Visualización del Conjunto de Datos**
 
 Para llevar a cabo el análisis, los datos utilizados para este análisis serán generados de forma artificial. El conjunto de datos contiene información detallada sobre la topología de la red de fibra óptica, la capacidad de ancho de banda, latencia. Igualmente, el objetivo es que el programa final sea eficiente y capaz de optimizar las redes de una fibra óptica real, con datos reales, por lo que se procurará que estos datos no se alejen mucho de la realidad.
 
 Al tratarse de un análisis que requiere del estudio de un grafo, se tomarán en cuenta 1500 nodos de fibra óptica en la infraestructura de Internet. Cada nodo tendrá los siguientes datos:
 | Dato | Descripción |
 |----------|----------|
-| ID | Identificador único del switch |
-| Marca | Marca del switch |
-| Modelo | Modelo del switch |
-| Puertos | Cantidad de puertos del switch
-| Ubicación | Coordenadas (latitud y longitud)
-| Capacidad de ancho de banda | Capacidad que tiene para enviar datos y recibir datos en un tiempo dado
+| `ID` | Identificador único del switch |
+| `Marca` | Marca del switch |
+| `Modelo` | Modelo del switch |
+| `Puertos` | Cantidad de puertos del switch
+| `Ubicación` | Coordenadas (latitud y longitud)
+| `Capacidad de ancho de banda` | Capacidad que tiene para enviar datos y recibir datos en un tiempo dado
 
 Para las aristas, se considerará la latencia que hay desde un nodo hacia otro, lo cual es importante para determinar la latencia mínima en la red.
 
 | Dato | Descripción |
 |----------|----------|
-| Nodo1 | Index del primer switch |
-| Nodo2 | Index del segundo switch |
-| Latencia | Latencia entre ambos switches (en microsegundos) |
+| `Nodo1` | Index del primer switch |
+| `Nodo2` | Index del segundo switch |
+| `Latencia` | Latencia entre ambos switches (en microsegundos) |
 
 Una muestra de datos para un nodo.
 | Dato | Ejemplo |
 |----------|----------|
-| ID | 76505 |
-| Marca | Juniper Networks |
-| Modelo | V6SV1K |
-| Puertos | 12 |
-| Ubicación | (89.49640570453458, 65.97759746460487) |
-| Ancho de banda | 210 |
+| `ID` | 76505 |
+| `Marca` | Juniper Networks |
+| `Modelo` | V6SV1K |
+| `Puertos` | 12 |
+| `Ubicación` | (89.49640570453458, 65.97759746460487) |
+| `Ancho de banda` | 210 |
 
 Una muestra de datos para una arista.
 | Dato | Ejemplo |
 |----------|----------|
-| Nodo1 | 401 |
-| Nodo2 | 1023 |
-| Latencia | 75 |
+| `Nodo1` | 401 |
+| `Nodo2` | 1023 |
+| `Latencia` | 75 |
 
-## Propuesta
+## **Propuesta**
 
 Nuestra propuesta se enfoca en la optimización de redes de fibra óptica de Internet, con el objetivo de mejorar la calidad del servicio al incrementar la eficiencia y velocidad de conexión para los usuarios. Las redes de fibra óptica cumplen un rol muy importante en la infraestructura de Internet, por lo que su optimización es esencial para garantizar que tenga un rendimiento óptimo.
 
@@ -97,7 +100,7 @@ Así, minimiza la suma total de las latencias en todas las aristas del grafo. Al
 
 En adición, también podemos implementar el algoritmo de Prim, con el fin de realizar una prueba de complejidad algorítmica para saber cual es más eficiente. Para esto, se registraría en primer lugar los componentes del dispositivo ejecutando ambos algoritmos, la adición de un algoritmo que mida el tiempo del inicio hasta el final con ambos algoritmos de conexión y finalmente registrarlos en un cuaderno de excel u otro tipo de documento que nos permita ordenar los datos para generar un gráfico que compare la eficiencia de los Algoritmos con relación al tiempo.
 
-## Diseño del aplicativo
+## **Diseño del aplicativo**
 
 Para el proceso de diseño del aplicativo que se enfocará en la optimización de redes de fibra óptica mediante un árbol de expansión mínima, se siguieron las etapas de la ingeniería de software, las cuales nos permitieron identificar las fases del ciclo de vida de desarrollo de software.
 
@@ -115,7 +118,7 @@ Para lograr un buen desarrollo del proyecto, utilizamos GitHub para manejar un r
 
 En resumen, el diseño del aplicativo se llevó a cabo de manera integral, abordando cada etapa con atención a los detalles y considerando las complejidades específicas de la optimización de redes de fibra óptica. La combinación de principios de ingeniería de software y análisis de algoritmos nos permite desarrollar un aplicativo eficiente para mejorar la infraestructura de redes de fibra óptica.
 
-## Bibliografía
+## **Bibliografía**
 
 Becerra, J. (2021, 29 de julio) Fibra óptica: la conectividad que está haciendo girar al mundo. CIO México. Recuperado el 21 de septiembre de 2023 de: Becerra, J. (2021, 29 de julio) Fibra óptica: la conectividad que está haciendo girar al mundo. CIO México. Recuperado el 21 de septiembre de 2023 de: https://cio.com.mx/fibra-optica-la-conectividad-que-esta-hciendo-girar-al-mundo/
 
