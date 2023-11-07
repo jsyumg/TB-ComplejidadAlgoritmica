@@ -59,7 +59,7 @@ Al tratarse de un análisis que requiere del estudio de un grafo, se tomarán en
 | `Modelo` | Modelo del switch |
 | `Puertos` | Cantidad de puertos del switch
 | `Ubicación` | Coordenadas (latitud y longitud)
-| `Capacidad de ancho de banda` | Capacidad que tiene para enviar datos y recibir datos en un tiempo dado
+| `Ancho de banda` | Capacidad que tiene para enviar datos y recibir datos en un tiempo dado
 
 Para las aristas, se considerará la latencia que hay desde un nodo hacia otro, lo cual es importante para determinar la latencia mínima en la red.
 
