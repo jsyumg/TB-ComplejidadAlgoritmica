@@ -1,26 +1,30 @@
 import csv
 
-# diccionario para almacenar grafo
-grafo = {}
+def construir_grafo(ruta):
+    grafo = {} # diccionario para almacenar grafo (lista de adyacencia)
+    with open(ruta, "r") as file:
+        read = csv.DictReader(file)
+        print("Leyendo archivo...")
+        for col in read:
+            nodo1 = int(col["Nodo1"])
+            nodo2 = int(col["Nodo2"])
+            datos_arista = eval(col["Datos"])
+            latencia = datos_arista['latencia']
 
-# cargar los nodos
-with open("datasets/nodos.csv", "r") as nodos_file:
-    nodos_reader = csv.DictReader(nodos_file)
-    for row in nodos_reader:
-        nodo_id = int(row["Nodo"])
-        datos_nodo = eval(row["Datos"])
-        grafo[nodo_id] = {"datos": datos_nodo, "aristas": {}} # guarda los datos del nodo y aristas
+            # crear lista de aristas para cada nuevo nodo
+            if nodo1 not in grafo:
+                grafo[nodo1] = list()
+            if nodo2 not in grafo:
+                grafo[nodo2] = list()
+            
+            # se guarda las aristas para ambos nodos al ser un grafo no digirido
+            grafo[nodo1].append((nodo2, latencia))
+            grafo[nodo2].append((nodo1, latencia))
+    
+    return grafo
 
-# cargar las aristas
-with open("datasets/aristas.csv", "r") as aristas_file:
-    aristas_reader = csv.DictReader(aristas_file)
-    for row in aristas_reader:
-        nodo1 = int(row["Nodo1"])
-        nodo2 = int(row["Nodo2"])
-        datos_arista = eval(row["Datos"]) # la latencia almacenada en la arista
+G = construir_grafo("datasets/aristas.csv")
 
-        grafo[nodo1]["aristas"][nodo2] = datos_arista # se guarda para ambos sentidos
-        grafo[nodo2]["aristas"][nodo1] = datos_arista
-
-# impresion de prueba
-print(grafo[0])
+# Impresión de ejemplo (primeras 10 aristas del nodo 0):
+for i in range(10):
+    print(G[0][i])
