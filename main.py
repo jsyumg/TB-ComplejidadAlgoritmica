@@ -1,5 +1,6 @@
 import heapq
 import csv
+import time
 
 # MST Algoritmo Prim
 def prim(G):
@@ -43,6 +44,7 @@ def union(parent, a, b):
 def kruskal(G):
     n = len(G)
     aristas = []
+    min_peso = 0
     for u in range(n):
         for v, w in G[u]:
             aristas.append((w, u, v))
@@ -55,8 +57,9 @@ def kruskal(G):
         if find(parent, u) != find(parent, v):
             union(parent, u, v)
             mst.append((u, v, w))
+            min_peso += w
 
-    return mst
+    return mst, min_peso
 
 def construir_grafo(ruta):
     grafo = {} # diccionario para almacenar grafo (lista de adyacencia)
@@ -87,3 +90,8 @@ G = construir_grafo("datasets/aristas.csv")
 for i in range(10):
     print(G[0][i])
 
+print("Hallando árbol de expansión mínima...")
+mst, peso = kruskal(G)
+print(peso)
+time.sleep(2)
+print(mst)
