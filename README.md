@@ -108,11 +108,11 @@ Para comenzar, se identificaron y analizaron detalladamente los requisitos y fun
 
 Luego, se realizó el análisis de los requisitos para saber lo que necesitábamos, lo cual se trabajó con la descripción del dataset, en el cual se especifica que se trabajará con los nodos que representan los switches y las aristas que representan las latencias entre estos.
 
-Además, con esto también se definió el diseño de los datos, se establecieron las estructuras de datos necesarias para el almacenamiento eficiente de información crítica, como la representación de la red de fibra óptica y sus atributos asociados en un grafo no dirigido. Estos datos son fundamentales para la ejecución del algoritmo de Kruskal, el cual fue seleccionado para el proceso de optimización.
+Además, con esto también se definió el diseño de los datos, se establecieron las estructuras de datos necesarias para el almacenamiento eficiente de información crítica, como la representación de la red de fibra óptica y sus atributos asociados en un grafo no dirigido. Estos datos son fundamentales para la ejecución del algoritmo de Kruskal, el cual fue seleccionado para el proceso de optimización. Se encuentran dos datasets: [nodos.csv](/datasets/nodos.csv) y [aristas.csv](/datasets/aristas.csv).
 
 Los algoritmos a utilizar son diseñados e implementados en el contexto del aplicativo, considerando a las complejidades temporales y espaciales, asegurando una ejecución eficiente orientada en redes de gran escala. Esto es importante, tomando en cuenta que el grafo tiene 1500 nodos, lo cual influye bastante en la eficiencia del programa.
 
-En cuanto a la interfaz de usuario, se desarrolla una interfaz intuitiva que permite a los usuarios interactuar fácilmente con el programa, con lo cual también se muestra una presentación clara de los resultados, facilitando la comprensión de las mejoras en la optimización de la red de fibra óptica.
+En cuanto a la interfaz de usuario, se desarrolla una interfaz intuitiva que permite a los usuarios interactuar fácilmente con el programa, con lo cual también se muestra una presentación clara de los resultados, facilitando la comprensión de las mejoras en la optimización de la red de fibra óptica. Esta se encuentra en el archivo [main.py](main.py).
 
 Para lograr un buen desarrollo del proyecto, utilizamos GitHub para manejar un repositorio, en el cual se realiza la documentación de este reporte, los datasets y el programa. Así como también establecimos una comunicación frecuente a través de un grupo de WhatsApp y organizamos reuniones presenciales en los cubículos de la universidad para compartir ideas y desarrollar el trabajo con mayor fluidez.
 
