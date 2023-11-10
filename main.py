@@ -1,6 +1,8 @@
 import heapq
 import csv
 import time
+import networkx as nx
+import matplotlib.pyplot as plt
 
 # MST Algoritmo Prim
 def prim(G):
@@ -8,6 +10,7 @@ def prim(G):
     visited = [False] * n
     g = [float('inf')] * n
     mst = []
+    min_peso = 0
 
     pq = []
     heapq.heappush(pq, (0, 0, -1))  # (g(s), s, parent)
@@ -20,13 +23,14 @@ def prim(G):
 
             if parent != -1:
                 mst.append((parent, u, _))
+                min_peso += _
 
             for v, w in G[u]:
                 if not visited[v] and w < g[v]:
                     g[v] = w
                     heapq.heappush(pq, (w, v, u))
 
-    return mst
+    return mst, min_peso
 
 
 # MST Algoritmo Kruskal
@@ -39,7 +43,6 @@ def union(parent, a, b):
     parentA = find(parent, a)
     parentB = find(parent, b)
     parent[parentA] = parentB
-
 
 def kruskal(G):
     n = len(G)
@@ -84,14 +87,40 @@ def construir_grafo(ruta):
     
     return grafo
 
+def visualizar(mst):
+    G = nx.Graph()
+
+    for u, v, w in mst:
+        G.add_edge(u, v, weight=w)
+
+    pos = nx.spring_layout(G)  # Puedes cambiar el diseño según tus preferencias
+    labels = nx.get_edge_attributes(G, 'weight')
+    nx.draw(G, pos, with_labels=True, font_size=1, font_weight='normal', node_size=10)
+    nx.draw_networkx_edge_labels(G, pos, edge_labels=labels, font_size=3)
+
+    plt.show()
+
+
 G = construir_grafo("datasets/aristas.csv")
 
 # Impresión de ejemplo (primeras 10 aristas del nodo 0):
 for i in range(10):
     print(G[0][i])
 
-print("Hallando árbol de expansión mínima...")
+print("Hallando árbol de expansión mínima con Prim...")
+t_inicio = time.time()
+mst, peso = prim(G)
+t_fin = time.time()
+tiempo = t_fin - t_inicio
+print(f"Latencia minima: {peso} Tiempo de ejecucion: {tiempo}")
+
+
+print("Hallando árbol de expansión mínima con Kruskal...")
+t_inicio = time.time()
 mst, peso = kruskal(G)
-print(peso)
-time.sleep(2)
-print(mst)
+t_fin = time.time()
+tiempo = t_fin - t_inicio
+print(f"Latencia minima: {peso} Tiempo de ejecucion: {tiempo}")
+
+
+#visualizar(mst)
