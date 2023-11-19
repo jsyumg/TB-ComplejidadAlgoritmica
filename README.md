@@ -32,7 +32,9 @@ Noviembre 2023
 - [Diseño de la aplicación](#diseño-de-la-aplicación)
     - [Desarrollo de etapas de ingeniería de software](#desarrollo-de-etapas-de-ingeniería-de-software)
     - [Prototipo de diseño de interfaz de aplicación](#prototipo-de-diseño-de-interfaz-de-aplicación)
-- [Bibliografía](#bibliografía)
+- [Validación de resultados y pruebas](#validación-de-resultados-y-pruebas)
+- [Conclusiones](#conclusiones)
+- [Referencias Bibliográficas](#referencias-bibliográficas)
 
 ## **Descripción del Problema**
 
@@ -104,7 +106,7 @@ Así, minimiza la suma total de las latencias en todas las aristas del grafo. Al
 
 ![image](imagenes/expansionMinima.jpg)
 
-En adición, tomando en cuenta que implementaremos ambos algoritmos, podemos realizar una prueba y análisis de complejidad algorítmica para saber cual es más eficiente. Para esto, se registraría en primer lugar los componentes del dispositivo ejecutando ambos algoritmos, la adición de un algoritmo que mida el tiempo del inicio hasta el final con ambos algoritmos de conexión y finalmente registrarlos en un cuaderno de excel u otro tipo de documento que nos permita ordenar los datos para generar un gráfico que compare la eficiencia de los Algoritmos con relación al tiempo.
+En adición, tomando en cuenta que implementaremos ambos algoritmos, podemos realizar una prueba y análisis de complejidad algorítmica para saber cual es más eficiente. Para esto, se registraría en primer lugar los componentes del dispositivo ejecutando ambos algoritmos, la adición de un algoritmo que mida el tiempo del inicio hasta el final con ambos algoritmos de conexión y ordenar los datos para generar un gráfico que compare la eficiencia de los Algoritmos con relación al tiempo.
 
 ## **Diseño de la aplicación**
 
@@ -138,7 +140,35 @@ La pantalla de resultado, muestra de forma gráfica el árbol de expansión mín
 
 ![image](imagenes/wireframe2.png)
 
-## **Bibliografía**
+## **Validación de resultados y pruebas**
+
+Para la validación de los resultados obtenidos en la optimización de redes de fibra óptica, se llevó a cabo un análisis de complejidad algorítmica, así como pruebas prácticas con un volumen de 1500 nodos. De este modo, podemos evaluar la eficiencia de los algoritmos seleccionados y garantizar su rendimiento en escenarios de redes de gran escala.
+
+Como datos de entrada, tenemos los datasets que almacenan la información de los 1500 switches (representados como nodos) y la información sobre las conexiones en base a la latencia entre los switches (representados como aristas), las cuales permiten crear un grafo sobre el cual trabajar.
+
+A partir de este grafo, se aplicaron los algoritmos de Prim y Kruskal para hallar el árbol de expansión mínima para la optimización de la red de fibra óptica. De este modo, la salida del programa es el resultado de la latencia mínima a partir de este árbol creado y el tiempo de ejecución que demoró cada algoritmo.
+
+En la prueba de ambos algoritmos se pudo verificar que cada uno trabaja de manera distinta, y tienen distintos tiempos de ejecución al realizar la prueba. Recordando que para Kruskal su complejidad algorítmica es O(E log V) y Prim es O(E + V log V) si V son los nodos y E las aristas, se identifica que Prim es más rápido con una cantidad densa de nodos pero kruskal es más rápido con una cantidad corta de datos. Creando subgrafos con cantidades incrementales de nodos la complejidad se calculó para nuestro caso con los siguientes resultados en la siguiente máquina.
+
+Procesador: Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz   3.70 GHz
+
+RAM: 32GB
+
+Este gráfico muestra la efectividad que tiene Prim sobre Kruskal al usar una gran cantidad de datos y probando la veracidad de la complejidad algorítmica teórica.
+
+
+![image](imagenes/grafico.jpeg)
+
+## **Conclusiones**
+
+En conclusión, en este trabajo se logró el principal objetivo de optimizar una red de fibra óptica de internet, aplicando la teoría de grafos y el árbol de expansión mínima. Se eligió el árbol de expansión mínima ya que garantiza la conectividad total de todos los nodos dentro de la red y asegurando que se logre reducir la latencia en la red de fibra óptica.
+
+La propuesta incluye la implementación de los algoritmos de Prim y Kruskal, los cuales son buenos métodos utilizados para el MST. Además, realizamos el análisis y validación de los resultados obtenidos para demostrar la eficacia de cada uno y cuál es el más adecuado a utilizar para el caso.
+
+Igualmente, aún hay más para investigar, ya que otra acción para poder optimizar una red de fibra óptica puede ser la mejora de flujo de datos de la red, para la cual aplica la teoría de flujo máximo y lograr maximizar la cantidad de datos que fluyen en la red. Para ello, se puede hacer uso del algoritmo de Ford-Fulkerson, junto con lo cual se utiliza también la búsqueda de grafos como BFS y DFS.
+
+
+## **Referencias Bibliográficas**
 
 Becerra, J. (2021, 29 de julio) Fibra óptica: la conectividad que está haciendo girar al mundo. CIO México. Recuperado el 21 de septiembre de 2023 de: Becerra, J. (2021, 29 de julio) Fibra óptica: la conectividad que está haciendo girar al mundo. CIO México. Recuperado el 21 de septiembre de 2023 de: https://cio.com.mx/fibra-optica-la-conectividad-que-esta-hciendo-girar-al-mundo/
 
