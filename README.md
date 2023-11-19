@@ -112,9 +112,9 @@ En adición, tomando en cuenta que implementaremos ambos algoritmos, podemos rea
 
 ### **Desarrollo de etapas de ingeniería de software**
 
-Para el proceso de diseño del aplicativo que se enfocará en la optimización de redes de fibra óptica mediante un árbol de expansión mínima, se siguieron las etapas de la ingeniería de software, las cuales nos permitieron identificar las fases del ciclo de vida de desarrollo de software.
+Para el proceso de diseño de la aplicación que se enfocará en la optimización de redes de fibra óptica mediante un árbol de expansión mínima, se siguieron las etapas de la ingeniería de software, las cuales nos permitieron identificar las fases del ciclo de vida de desarrollo de software.
 
-Para comenzar, se identificaron y analizaron detalladamente los requisitos y funcionalidades del aplicativo. Esto se empezó a trabajar desde la identificación del problema de la red de fibra óptica y como se espera que el programa sea capaz de hallar una optimización de esta.
+Para comenzar, se identificaron y analizaron detalladamente los requisitos y funcionalidades de la aplicación. Esto se empezó a trabajar desde la identificación del problema de la red de fibra óptica y como se espera que el programa sea capaz de hallar una optimización de esta.
 
 Luego, se realizó el análisis de los requisitos para saber lo que necesitábamos, lo cual se trabajó con la descripción del dataset, en el cual se especifica que se trabajará con los nodos que representan los switches y las aristas que representan las latencias entre estos.
 
@@ -147,6 +147,27 @@ Para la validación de los resultados obtenidos en la optimización de redes de 
 Como datos de entrada, tenemos los datasets que almacenan la información de los 1500 switches (representados como nodos) y la información sobre las conexiones en base a la latencia entre los switches (representados como aristas), las cuales permiten crear un grafo sobre el cual trabajar.
 
 A partir de este grafo, se aplicaron los algoritmos de Prim y Kruskal para hallar el árbol de expansión mínima para la optimización de la red de fibra óptica. De este modo, la salida del programa es el resultado de la latencia mínima a partir de este árbol creado y el tiempo de ejecución que demoró cada algoritmo.
+
+Se muestran las siguientes capturas de pantalla de la ejecución del programa:
+
+Al iniciar el programa, se muestra un mensaje para informar al usuario que se empezará la lectura de datos de los datasets y puede demorar unos segundos.
+![image](imagenes/ejecucion1.png)
+
+Luego de haber cargado los datos, se muestra la pantalla con dos botones, uno para hallar el árbol de expansión mínima con Kruskal y con Prim.
+![image](imagenes/ejecucion2.png)
+
+Al presionar el botón de Kruskal, se muestra la latencia mínima resultante, así como el tiempo de ejecución que demoró el algoritmo. También muestra dos botones, uno para ver el árbol de forma gráfica y otro para ver una muestra de datos de una arista del MST.
+![image](imagenes/ejecucion3.png)
+
+Al presionar el botón de Prim, se muestra lo mismos datos que para el caso de Kruskal.
+![image](imagenes/ejecucion4.png)
+
+Cuando presionamos el botón para ver el árbol, se visualiza el árbol de expansión mínima en una nueva ventana, sobre la cual el usuario puede hacer zoom y ver los 1500 nodos con las 1499 aristas.
+![image](imagenes/ejecucion5.png)
+
+Si presiona el botón para ver muestra de datos, el programa selecciona una arista aleatoria del árbol de expansión mínima, y muestra la información de los dos nodos que conectan y el valor de la latencia.
+![image](imagenes/ejecucion6.png)
+
 
 En la prueba de ambos algoritmos se pudo verificar que cada uno trabaja de manera distinta, y tienen distintos tiempos de ejecución al realizar la prueba. Recordando que para Kruskal su complejidad algorítmica es O(E log V) y Prim es O(E + V log V) si V son los nodos y E las aristas, se identifica que Prim es más rápido con una cantidad densa de nodos pero kruskal es más rápido con una cantidad corta de datos. Creando subgrafos con cantidades incrementales de nodos la complejidad se calculó para nuestro caso con los siguientes resultados en la siguiente máquina.
 
