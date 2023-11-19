@@ -208,7 +208,8 @@ class Aplicacion:
         btnVerMST.place(x=680, y=400)
         self.ventanaMST.mainloop()
         
-    
+    def getGrafo(self):
+        return self.grafo
     def ver_mst(self):
         visualizar(self.mst)
 
@@ -222,5 +223,58 @@ class Aplicacion:
         self.construir_grafo("datasets/nodos.csv", "datasets/aristas.csv")
         self.ventana.mainloop()
 
+    def generar_subgrafo(self, n):
+        if n > len(self.grafo):
+            raise ValueError("El número de nodos solicitado es mayor que el número de nodos en el grafo.")
+
+        # Seleccionar n nodos al azar
+        nodos_seleccionados = random.sample(list(self.grafo.keys()), n)
+
+        # Crear un nuevo grafo (diccionario) para el subgrafo
+        subgrafo = {}
+
+        for nodo in nodos_seleccionados:
+            # Para cada nodo seleccionado, agregar al subgrafo solo las aristas que conectan con otros nodos seleccionados
+            subgrafo[nodo] = [arista for arista in self.grafo[nodo] if arista[0] in nodos_seleccionados]
+
+        return subgrafo
+
+
 app = Aplicacion()
 app.ejecutar()
+
+import networkx as nx
+
+def convertir_a_grafo_networkx(grafo_dict):
+    G = nx.Graph()
+    for nodo, aristas in grafo_dict.items():
+        for vecino, peso in aristas:
+            G.add_edge(nodo, vecino, weight=peso)
+    return G
+
+
+times_kruskal = []
+times_prim = []
+num_nodes = list(range(10, 1501, 100))
+
+for n in num_nodes:
+    subgraph = convertir_a_grafo_networkx(app.generar_subgrafo(n))
+
+    start = time.time()
+    nx.minimum_spanning_tree(subgraph, algorithm='kruskal')
+    end = time.time()
+    times_kruskal.append(end - start)
+
+    start = time.time()
+    nx.minimum_spanning_tree(subgraph, algorithm='prim')
+    end = time.time()
+    times_prim.append(end - start)
+
+# Graficando los resultados
+plt.plot(num_nodes, times_kruskal, label='Kruskal')
+plt.plot(num_nodes, times_prim, label='Prim')
+plt.xlabel('Número de Nodos')
+plt.ylabel('Tiempo (s)')
+plt.title('Comparación de Complejidad Algorítmica: Kruskal vs Prim')
+plt.legend()
+plt.show()
