@@ -1,4 +1,4 @@
-# Informe de Trabajo Parcial
+# Informe de Trabajo Final
 
 ## **Carátula**
 
